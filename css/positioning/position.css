@@ -1,0 +1,23 @@
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /*border: 3px solid red;*/
+}
+
+#octopus {
+  position: relative;
+  margin-top:100px;
+  z-index: -1;
+}
+
+#hat {
+  position: relative;
+  top: -375px;
+}
+
+#glasses {
+  position: relative;
+  top: -355px;
+
+}
