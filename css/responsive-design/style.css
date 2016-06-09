@@ -13,11 +13,6 @@ section {
   vertical-align: top;
 }
 
-blockquote {
-  border-left: 5px solid blue;
-  padding: 15px;
-  margin-left: 0px;
-}
 
 #external-links ul {
   list-style-type: none;
@@ -25,12 +20,17 @@ blockquote {
   width: 200px;
 }
 
+blockquote {
+  border-left: 5px solid blue;
+  padding: 15px;
+  margin-left: 0px;
+}
+
+
 cite {
   display: block;
   margin-top: 10px;
 }
-
-
 
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like,
