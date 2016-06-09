@@ -49,3 +49,16 @@ figcaption {
   text-align: right;
 }
 
+@media screen and (max-width: 422px) {
+  body { font-size: 0.75em; }
+}
+
+@media screen and (max-width: 349px) {
+  h1 { display: none; }
+}
+
+/*@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}*/
