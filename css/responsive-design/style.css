@@ -5,7 +5,12 @@ body {
 main {
   display: inline-block;
   vertical-align: top;
-  width: 756px
+  width: 756px;
+}
+
+section {
+  display: inline-block;
+  vertical-align: top;
 }
 
 blockquote {
@@ -14,21 +19,18 @@ blockquote {
   margin-left: 0px;
 }
 
+#external-links ul {
+  list-style-type: none;
+  padding-left: 0px;
+  width: 200px;
+}
+
 cite {
   display: block;
   margin-top: 10px;
 }
 
-section {
-  display: inline-block;
-  vertical-align: top;
-}
 
-
-#external-links ul {
-  list-style-type: none;
-  padding-left: 0px;
-}
 
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like,
