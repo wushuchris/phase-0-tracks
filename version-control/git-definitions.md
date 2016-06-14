@@ -13,3 +13,5 @@ A commit is like saying "i'm done with this code and it's ready" and a good mess
 
 * What is a merge conflict?
 Merge conflict is when code is written into the same line in the same file and git is asking what to do.
+
+*Hello Andrew, I'm adding this message for the pull request part of Phase 0 - Module 1.5
