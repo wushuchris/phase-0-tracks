@@ -24,3 +24,10 @@ adoption = gets.chomp
 puts "Estimated Age?"
 age = gets.to_i
 
+puts "You've entered the following data
+        Name: #{name}
+        Volume: #{volume}
+        Fur Color: #{fur}
+        Adoption candidate: #{adoption}
+        Estimated Age: #{age}"
+
