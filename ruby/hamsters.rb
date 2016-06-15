@@ -20,6 +20,12 @@ fur = gets.chomp
 
 puts "Candidate for adoption?"
 adoption = gets.chomp
+case adoption
+  when 'y','Y','yes'
+    adoption = true
+  when 'n', 'N','no'
+    adoption = false
+end
 
 puts "Estimated Age?"
 age = gets.to_i
