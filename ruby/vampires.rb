@@ -6,6 +6,7 @@ health_insurance = nil
 age_calc = nil
 current_year = 2016
 counter = nil
+allergies = nil
 
 puts "How many people to process?"
 counter = gets.to_i
@@ -48,22 +49,34 @@ counter.times do
   end
   #puts "#{health_insurance}" <<< Turn this on to check what is in variable while testing in repl.
 
+  puts "What allergies do you have? Please enter your allergies one at a time and when you've completed telling us all of your allergies please enter 'done'"
+  puts "Enter Allergy"
+  allergies = gets.chomp
+  until allergies == "done" || allergies == "sunshine"
+    puts "Enter Allergy"
+    allergies = gets.chomp
+  end
+
+
   puts "ACTIVATING VAMPIRE DETECTION ALGORITHM"
 
-  #If the employee got their age right, and is willing to eat garlic bread or sign up for insurance, the result is “Probably not a vampire.”
-  if age == age_calc && (garlic_bread == true || health_insurance == true)
-    puts "Probably not a vampire - please proceed"
-  #If the employee got their age wrong, and hates garlic bread or waives insurance, the result is “Probably a vampire.”
+  #Even if the employee is an amazing liar otherwise, anyone going by the name of “Drake Cula” or “Tu Fang” is clearly a vampire, because come on. In that case, you should print “Definitely a vampire.”
+  if name == "Drake Cula" || name == "Tu Fang" || name == "Lestat"
+      puts "Definitely a vampire - Asset Containment Unit is on its way, we want to run experiments on you."
+  #If allergies is sunshine
+    elsif allergies == "sunshine"
+      puts "Probably a vampire - Please step into the sunlight for further testing."
+  #If the employee got their age wrong, hates garlic bread, and doesn’t want insurance, the result is “Almost certainly a vampire.”
     elsif age != age_calc && garlic_bread == false && health_insurance == false
       puts "Almost certainly a vampire - The brute squad and terminator robots are on their way"
-  #Even if the employee is an amazing liar otherwise, anyone going by the name of “Drake Cula” or “Tu Fang” is clearly a vampire, because come on. In that case, you should print “Definitely a vampire.”
+  #If the employee got their age wrong, and hates garlic bread or waives insurance, the result is “Probably a vampire.”
     elsif age != age_calc && (garlic_bread == false || health_insurance == false)
       puts "Probably a vampire - The brute squad is on their way!"
-  #If the employee got their age wrong, hates garlic bread, and doesn’t want insurance, the result is “Almost certainly a vampire.”
-    elsif name == "Drake Cula" || name == "Tu Fang"
-      puts "“Definitely a vampire - Asset Containment Unit is on its way, we want to run experiments on you."
+  #If the employee got their age right, and is willing to eat garlic bread or sign up for insurance, the result is “Probably not a vampire.”
+    elsif age == age_calc && (garlic_bread == true || health_insurance == true)
+      puts "Probably not a vampire - please proceed"
   #Otherwise, print “Results inconclusive.”
     else
-      puts "Results inconclusive - the doctor has been dispatched for visual analysis"
+      puts "Results inconclusive - the doctor has been dispatched for visual analysis."
   end
 end
