@@ -79,4 +79,5 @@ counter.times do
     else
       puts "Results inconclusive - the doctor has been dispatched for visual analysis."
   end
+  puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 end
