@@ -29,6 +29,7 @@ def decrypt(password)
 end
 
 
+
 puts "Would you like to encrypt(1) or decrypt(2)"
 selector = gets.to_i
 
@@ -44,6 +45,10 @@ else
 end
 
 p password
+
+# I Cannot figure this out! I don't understand why it doesn't work
+#decrypt(encrypt(password))
+#p password
 
 #encrypt(password)
 #p password
