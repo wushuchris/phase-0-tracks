@@ -1,8 +1,10 @@
-  def encrypt(password)
+def encrypt(password)
     index = 0
     until index == password.length
       if password[index] == "z"
         password[index] = "a"
+      elsif password[index] == " "
+        password[index] = " "
       else
       password[index] = password[index].next
       end
