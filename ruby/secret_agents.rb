@@ -4,7 +4,7 @@ def encrypt(password)
   index = 0
   encrypted_password = ""
   until index == password.length
-    password[index] = password[index].next
+    encrypted_password[index] = password[index].next
     index += 1
   end
 end
@@ -25,13 +25,9 @@ def decrypt(password)
 
   until index == password_length
     password_test = password[index]
-
     test = alpha.index(password_test) - 1
-
     final = alpha[test]
-
     password_decrypted = password_decrypted + final
-    #alpha.index(password[index])-1
     index += 1
   end
   p password_decrypted
