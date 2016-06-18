@@ -23,8 +23,12 @@ def decrypt(password)
    index = 0
    alpha = "abcdefghijklmnopqrstuvwxyz"
    until index == password.length
+    if password[index] == " "
+      password[index] = " "
+    else
      password[index] = alpha[alpha.index(password[index])-1]
-     index += 1
+    end
+    index += 1
    end
 end
 
