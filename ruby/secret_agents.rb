@@ -12,13 +12,6 @@ def encrypt(password)
     end
  end
 
-  #Decrypt PseudoCode
-
-    #1. Take a password and find where each letter is on the alphabet
-    #2. Take that value and subtract 1
-    #3. Set the new value as the index value for that letter
-    #4. Move on to next letter until end of string
-
 def decrypt(password)
    index = 0
    alpha = "abcdefghijklmnopqrstuvwxyz"
