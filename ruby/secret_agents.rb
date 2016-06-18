@@ -1,44 +1,49 @@
-password = nil
+  def encrypt(password)
+    index = 0
+    until index == password.length
+      if password[index] == "z"
+        password[index] = "a"
+      else
+      password[index] = password[index].next
+      end
+      index += 1
+    end
+ end
 
-def encrypt(password)
-  index = 0
-  encrypted_password = ""
-  until index == password.length
-    encrypted_password[index] = password[index].next
-    index += 1
-  end
-end
+  #Decrypt PseudoCode
 
-#Decrypt PseudoCode
-
-  #1. Take a password and find where each letter is on the alphabet
-  #2. Take that value and subtract 1
-  #3. Set the new value as the index value for that letter
-  #4. Move on to next letter until end of string
+    #1. Take a password and find where each letter is on the alphabet
+    #2. Take that value and subtract 1
+    #3. Set the new value as the index value for that letter
+    #4. Move on to next letter until end of string
 
 def decrypt(password)
-
-  index = 0
-  password_length = password.length
-  alpha = "abcdefghijklmnopqrstuvwxyz"
-  password_decrypted = ""
-
-  until index == password_length
-    password_test = password[index]
-    test = alpha.index(password_test) - 1
-    final = alpha[test]
-    password_decrypted = password_decrypted + final
-    index += 1
-  end
-  p password_decrypted
+   index = 0
+   alpha = "abcdefghijklmnopqrstuvwxyz"
+   until index == password.length
+     password[index] = alpha[alpha.index(password[index])-1]
+     index += 1
+   end
 end
 
 
-puts "Please enter password."
+puts "Would you like to encrypt(1) or decrypt(2)"
+selector = gets.to_i
+
+puts "Enter Password"
 password = gets.chomp
 
+if selector == 1
+  encrypt(password)
+elsif selector == 2
+  decrypt(password)
+else
+  puts "Invalid input"
+end
 
-encrypt(password)
-p password #<<< Debugging use
-decrypt(password)
-p password #<<<dubugging use
+p password
+
+#encrypt(password)
+#p password
+#decrypt(password)
+#p password
