@@ -1,0 +1,53 @@
+#   At the top of your file, add a method that takes three items as parameters and returns an array of those items. So build_array(1, "two", nil) would return [1, "two", nil]. This won't take much code, but the syntax might feel a bit odd. At the bottom of the file, call the method to show that it works.
+
+def build_array (x, y, z)
+  array_build = [x, y, z]
+end
+
+p build_array(1,"two", nil)
+
+#   At the top of your file, add a method that takes an array and an item as parameters, and returns the array with the item added. So add_to_array([], "a") would return ["a"], and add_to_array(["a", "b", "c", 1, 2], 3) would return ["a", "b", "c", 1, 2, 3]. Print a few test calls of the method.
+
+def build_array2(array2,item)
+  array2.push(item)
+end
+
+p build_array2(["a", "b", "c", 1, 2],3)
+p build_array2(["a", "b", "c", 1, 2],4)
+p build_array2(["a", "b", "c", 1, 2],5)
+
+
+
+#Arrays Challenge 5-2
+
+#1 initialize an empty array and store it in a variable (you can choose the name).
+
+p invfactors = []
+
+#2 Add five items to your array.
+
+p invfactors = ["mkt-rf", "low vol", "mom", "qlty", "val"]
+
+#3 Delete the item at index 2.
+
+p invfactors.delete_at(2)
+
+#4 Insert a new item at index 2.
+
+p invfactors.insert(2,"new factor")
+
+#5 Remove the first item of the array without having to refer to its index.
+
+p invfactors.delete("mkt-rf")
+
+#6 Ask the array whether it includes a certain item. Print the result of this method call (labeled so it prints as more than just an isolated boolean value without any context.)
+
+p invfactors.select { |f| f == "qlty" }
+
+#7 Initialize another array that already has a few items in it.
+
+p invfactors2 = ["acc","beta"]
+
+#8 Add the two arrays together and store them in a new variable. Print the new array.
+p all_factors = [invfactors, invfactors2]
+p all_factors.flatten
