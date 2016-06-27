@@ -12,4 +12,17 @@
 #Behavior
 #Jump
 #Run
-#
+
+class Puppy
+
+  def fetch(toy)
+    puts "I brought back the #{toy}!"
+    toy
+  end
+
+end
+
+#driver code
+
+puppy1 = Puppy.new
+puppy1.fetch("tennis ball")
