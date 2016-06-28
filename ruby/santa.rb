@@ -1,6 +1,8 @@
 # Challenge 6-3 Christopher Mendoza see end notes
 
 class Santa
+  attr_reader :ethnicity
+  attr_accessor :age, :gender
 
   def initialize(gender,ethnicity)
     puts "Initializing Santa instance..."
@@ -34,15 +36,15 @@ class Santa
     puts "age: #{@age}"
   end
 
-# getter methods
+# getter methods - Moved to top of class in release 3 (i'm just showing my work)
 
-  def age
-    @age
-  end
+  #def age
+  #  @age
+  #end
 
-  def ethnicity
-    @ethnicity
-  end
+  #def ethnicity
+  #  @ethnicity
+  #end
 
 # setter methods
 
@@ -50,9 +52,9 @@ class Santa
     @age += 1
   end
 
-  def change_gender=(new_gender)
-    @gender = new_gender
-  end
+  #def change_gender=(new_gender) #>>> Moved to top of class in release 3 (just showing work)
+  #  @gender = new_gender
+  #end
 
   def get_mad_at=(reindeer_name)
     if @reindeer_ranking.include?(reindeer_name)
@@ -89,12 +91,15 @@ p santas[0]
 santas[0].change_gender = "different_gender"
 p santas[0]
 
-santas[0].get_mad_at("Dasher")
+santas[0].get_mad_at = "Dasher"
 p santas[0]
 
 p santas[0].ethnicity
 p santas[0].age
 
+#driver code - release 3
+p santas[0].ethnicity
+p santas[0].age = 22
 
 # Release 0
 
@@ -119,3 +124,6 @@ p santas[0].age
 #Add two "getter" methods as well:
 ##The method age should simply return @age.
 ##The method ethnicity should return @ethnicity.
+
+#Releaes 3
+#Refactor with attr_reader and attr_accessor
