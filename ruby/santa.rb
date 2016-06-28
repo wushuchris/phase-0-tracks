@@ -74,32 +74,55 @@ end
 #santa1.about
 
 #driver code - release 1
-santas = []
-santas << Santa.new("agender", "black")
-santas << Santa.new("female", "Latino")
-santas << Santa.new("bigender", "white")
-santas << Santa.new("male", "Japanese")
-santas << Santa.new("female", "prefer not to say")
-santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
-santas << Santa.new("N/A", "N/A")
+#santas = []
+#santas << Santa.new("agender", "black")
+#santas << Santa.new("female", "Latino")
+#santas << Santa.new("bigender", "white")
+#santas << Santa.new("male", "Japanese")
+#santas << Santa.new("female", "prefer not to say")
+#santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
+#santas << Santa.new("N/A", "N/A")
 #p santas
 #driver code - release 2
-p santas [0]
-santas[0].celebrate_birthday = 1
-p santas[0]
+#p santas [0]
+#santas[0].celebrate_birthday = 1
+#p santas[0]
 
-santas[0].change_gender = "different_gender"
-p santas[0]
+#santas[0].change_gender = "female"
+#p santas[0]
 
-santas[0].get_mad_at = "Dasher"
-p santas[0]
+#santas[0].gender = "female" #new driver code for releae 4
+#p santas[0]
 
-p santas[0].ethnicity
-p santas[0].age
+#santas[0].get_mad_at = "Dasher"
+#p santas[0]
+
+#p santas[0].ethnicity
+#p santas[0].age
 
 #driver code - release 3
-p santas[0].ethnicity
-p santas[0].age = 22
+#p santas[0].ethnicity
+#p santas[0].age = 22
+
+#driver code - release 4
+
+santas = []
+number_of_santas = nil
+
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+puts "How many Santas do you want to create?"
+number_of_santas = gets.to_i
+
+number_of_santas.times do |i|
+  santas << Santa.new(example_genders.sample, example_ethnicities.sample)
+end
+santas.each { |x| x.age = rand(0..140) }
+
+p santas
+
 
 # Release 0
 
@@ -122,8 +145,17 @@ p santas[0].age = 22
 ##2-3 The @gender attribute should have a setter method that allows @gender to be reassigned from outside the class definition.
 
 #Add two "getter" methods as well:
-##The method age should simply return @age.
-##The method ethnicity should return @ethnicity.
+##2-4 The method age should simply return @age.
+##2-5 The method ethnicity should return @ethnicity.
 
-#Releaes 3
+#Release 3
 #Refactor with attr_reader and attr_accessor
+
+#Release 4
+#Write a program that creates lots of Santas.
+
+##4-1 Use our array of example genders and an array of example ethnicities to create your Santas with a randomly selected gender and a randomly selected ethnicity. (How do you randomly select an array item? The Array documentation should be able to help you out there!)
+
+##4-2 Set your new Santa's age to a random number between 0 and 140.
+
+##No need to store your Santas in a data structure, but your program should print out the attributes of each Santa using the instance methods that give you access to that data.
