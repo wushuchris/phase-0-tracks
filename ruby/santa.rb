@@ -120,8 +120,9 @@ number_of_santas.times do |i|
   santas << Santa.new(example_genders.sample, example_ethnicities.sample)
 end
 santas.each { |x| x.age = rand(0..140) }
+santas.each { |x| puts x.about }
 
-p santas
+#p santas
 
 
 # Release 0
