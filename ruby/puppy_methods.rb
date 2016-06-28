@@ -60,7 +60,8 @@ end
 
 ninja_list = []
 
-## 1 && 2 && 3
+## 1 && 2 && 3 (fulfills reqs. to my preference, DBC code req. commented out below, ie. use ".each")
+
 50.times { |ninja|
   ninja = Ninja.new
   ninja_list << ninja
@@ -68,7 +69,9 @@ ninja_list = []
   ninja.flip(1)
  }
 
-
+# This code actually fulfills the requirements but I feel better with the code above.
+# ninja_list.each { |ninja| ninja.jump(1) }
+# ninja_list.each { |ninja| ninja.flip(1) }
 
 
 
