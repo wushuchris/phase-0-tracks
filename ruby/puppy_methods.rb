@@ -60,12 +60,14 @@ end
 
 ninja_list = []
 
-## 1 && 2
-50.times { |ninja| ninja_list << Ninja.new }
-#ninja_list
-## 3
-ninja_list.each { |ninja| ninja.jump(1) }
-ninja_list.each { |ninja| ninja.flip(1) }
+## 1 && 2 && 3
+50.times { |ninja|
+  ninja = Ninja.new
+  ninja_list << ninja
+  ninja.jump(1)
+  ninja.flip(1)
+ }
+
 
 
 
