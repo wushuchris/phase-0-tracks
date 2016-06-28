@@ -28,7 +28,6 @@ class Santa
     puts "That was a good #{cookie_type} cookie!"
   end
 
-
   def about
     puts "gender: #{@gender}"
     puts "ethniciity: #{@ethnicity}"
@@ -55,7 +54,7 @@ class Santa
     @gender = new_gender
   end
 
-  def get_mad_at(reindeer_name)
+  def get_mad_at=(reindeer_name)
     if @reindeer_ranking.include?(reindeer_name)
       @reindeer_ranking.delete(reindeer_name)
       @reindeer_ranking.insert(@reindeer_ranking.length, reindeer_name)
