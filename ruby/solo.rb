@@ -53,36 +53,42 @@ class Soccer_ball
   end
 
   def make_change(make_change)
+
+    another_change = nil
+
+    until another_change == "n" do
     puts "What attribute would you like to change? [1] = color [2] = size [3] = brand [4] = club name [5] = team name [6] = game ball"
 
     attribute_change = gets.to_i
 
-    if attribute_change == 1
-    puts "What color is the ball?"
-    @color = gets.chomp
+      if attribute_change == 1
+      puts "What color is the ball?"
+      @color = gets.chomp
 
-    elsif attribute_change == 2
-    puts "What is the size of the ball?"
-    @size = gets.chomp
+      elsif attribute_change == 2
+      puts "What is the size of the ball?"
+      @size = gets.chomp
 
-    elsif attribute_change == 3
-    puts "What brand is the ball?"
-    @brand = gets.chomp
+      elsif attribute_change == 3
+      puts "What brand is the ball?"
+      @brand = gets.chomp
 
-    elsif attribute_change == 4
-    puts "What club does the ball belong too?"
-    @club_name = gets.chomp
+      elsif attribute_change == 4
+      puts "What club does the ball belong too?"
+      @club_name = gets.chomp
 
-    elsif attribute_change == 5
-    puts "What team does the ball belong too?"
-    @team_name = gets.chomp
+      elsif attribute_change == 5
+      puts "What team does the ball belong too?"
+      @team_name = gets.chomp
 
-    elsif attribute_change == 6
-    puts "I'm sorry the game ball status may not be changed.  All game balls are provided by the league and if the league ball is impaired a referree may choose a ball from either team to replace the league ball only at time of play"
+      elsif attribute_change == 6
+      puts "I'm sorry the game ball status may not be changed.  All game balls are provided by the league and if the league ball is impaired a referree may choose a ball from either team to replace the league ball only at time of play"
 
-    else
-    puts "I don't understand"
-
+      else
+      puts "I don't understand"
+      end
+      puts "would you like to make another change? (y or n)"
+      another_change = gets.chomp
     end
   end
 
@@ -122,11 +128,12 @@ number_of_soccer_balls.times do |i|
   soccer_balls.about
   puts "Do you want to make a change? (y or n)"
   make_change = gets.chomp
-  if make_change == "y"
-    soccer_balls.make_change(make_change)
-  else make_change == "n"
-    puts "Thanks"
-  end
+    if make_change == "y"
+      soccer_balls.make_change(make_change)
+    else make_change == "n"
+      puts "Thanks"
+    end
+    soccer_balls.about
 end
 
 puts "Here is your report for all balls created"
