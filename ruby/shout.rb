@@ -12,6 +12,6 @@ end
 
 #driver code
 
-p require_relative 'Shout'
+require_relative 'Shout'
 p Shout.yell_angrily("Go Away")
 p Shout.yell_happily("Hello")
