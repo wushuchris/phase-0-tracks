@@ -14,10 +14,8 @@ for ( var i = 0; i < words.length; i++) {
 }
 
 var largest = Math.max.apply(Math, evalWordsLength);
-var position = evalWordsLength.indexOf(largest);
-var largestWord = words[position];
-
-console.log(evalWordsLength);
-console.log(largest);
-console.log(position);
-console.log(largestWord);
+for ( var i = 0; i < words.length; i++) {
+  if (words[i].length == largest) {
+    console.log(words[i]);
+  }
+}
