@@ -3,23 +3,14 @@ var colors = ["blue", "silver", "white", "orange"];
 // array of four names
 var names = ["ed", "jack", "dancer", "prancer"];
 // declare horse hash
-var horse = {};
 // add horse name as key and color as value
-horse['name'] = "jack";
-horse['color'] = "blue";
-console.log("The horse's name is " + horse['name']);
-console.log(horse['name'] + " is " + horse['color']);
-
-function Horse(name, color) {
-  console.log("our new horse:", this);
-  this.name = name;
-  this.color = color;
-  console.log("horse is in the barn");
+var horses = {};
+for ( var i = 0; i < names.length; i++) {
+  horses[names[i]] = colors[i];
 }
 
-var Horse1 = new Horse('jack', 'silver');
-console.log(Horse1);
-console.log("----");
+console.log(horses)
+
 //write a constructor function for a car. Give it a few different properties of various data types, including at least one function. Demonstrate that your function works by creating a few cars with it.
 function Car(make, model, doors) {
   // In this context, 'this' refers to
