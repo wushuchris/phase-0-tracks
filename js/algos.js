@@ -129,7 +129,8 @@ function longestWord2() {
   }
 }
 
-howManyWords(5);
+// driver code
+howManyWords(10);
 console.log(randomWord)
 console.log(randomWordsGenerated)
 longestWord2();
