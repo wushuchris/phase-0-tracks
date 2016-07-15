@@ -81,4 +81,55 @@ for (var x = 0; x < compareArray.length - 1; x++)
 
 // declare an integer for length of array
 // declare where to get random letters from
+// declare an array where the random words will be put
+// run a generate word function
+// put those words into the array
+// print the array that was generated
+// call longest word function to print longest word that was randomly generated
 
+var letters = "abcdefghijklmnopqrstuvwxyz";
+var randomWordsGenerated = [];
+var randomWord = "";
+var evalWordsLength2 = []
+
+function howManyWords(number) {
+  for ( var i = 0; i <= number; i++) {
+    randomWordGenerator();
+  }
+}
+
+function randomWordGenerator() {
+  // random number generator to determine length of random word
+  // create loop to generate a word at a random length
+  for ( var i = 0; i < Math.floor(Math.random() * 10 + 1); i++)
+  //random letter generator
+    randomWord += letters.charAt(Math.floor(Math.random()*letters.length));
+    pushRandomWord(randomWord);
+    console.log(randomWord);
+    randomWord = "";
+}
+
+// function to push random word generated into randomWordsGenerated array
+function pushRandomWord(randomWord) {
+  randomWordsGenerated.push(randomWord);
+}
+
+// function longest word for release 2
+
+function longestWord2() {
+  for ( var i = 0; i < randomWordsGenerated.length; i++) {
+    evalWordsLength2.push(randomWordsGenerated[i].length);
+  }
+
+  var largest2 = Math.max.apply(Math, evalWordsLength2);
+  for ( var i = 0; i < randomWordsGenerated.length; i++) {
+    if (randomWordsGenerated[i].length == largest2) {
+      console.log(randomWordsGenerated[i]);
+    }
+  }
+}
+
+howManyWords(5);
+console.log(randomWord)
+console.log(randomWordsGenerated)
+longestWord2();
