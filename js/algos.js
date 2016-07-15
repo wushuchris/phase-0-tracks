@@ -65,7 +65,7 @@ for (var x = 0; x < compareArray.length - 1; x++)
   {
   for (var y = x + 1; y < compareArray.length; y++)
     {
-      if( (compareArray[x] == (compareArray[y])) && (x != y) )
+      if (compareArray[x] == compareArray[y])
       {
         console.log("Element that is the Same: "+compareArray[y]);
       }
@@ -73,3 +73,12 @@ for (var x = 0; x < compareArray.length - 1; x++)
   }
 
 //console.log(compareArray);
+
+// release 2
+// Write a function that takes an integer for length, and builds and returns an array of strings of the given length. So if we ran your function with an argument of 3, we would get an array of 3 random words back (the words don't have to be actual sensical English words -- "nnnnfph" totally counts). The words should be of randomly varying length, with a minimum of 1 letter and a maximum of 10 letters. (This involves a new trick, generating a random number, that you'll have to look up, but the solution on how to do so is relatively straightforward.)
+
+//Add driver code that does the following 10 times: generates an array, prints the array, feeds the array to your "longest word" function, and prints the result.
+
+// declare an integer for length of array
+// declare where to get random letters from
+
