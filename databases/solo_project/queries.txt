@@ -44,3 +44,14 @@ iShares MSCI EAFE|iShares
 Vanguard Value ETF|Vanguard
 Vanguard Emerging Markets|Vanguard
 iShares US Preferred|iShares
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+
+command:
+DELETE FROM etf WHERE ntf="false";
+
+output:
+n/a but here's the resulting remaining items.
+1|SP500|195262323|true|1
+4|Vanguard Value ETF|42000000000|true|2
+5|Vanguard Emerging Markets|39000000000|true|2
