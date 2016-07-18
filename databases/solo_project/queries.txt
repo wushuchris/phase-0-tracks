@@ -1,0 +1,46 @@
+1. Display the information in one table (either is fine).
+
+command:
+SELECT * FROM etf;
+
+output:
+1|SP500|195262323|true|1
+2|Vanguard Total Stock Market|62414726|false|2
+3|iShares MSCI EAFE|58622297|false|1
+4|Vanguard Value ETF|42000000000|true|2
+5|Vanguard Emerging Markets|39000000000|true|2
+6|iShares US Preferred|16000000000|false|1
+
+2. Update an item that meets som econdition (you can shoose a condition that makes sense)
+
+command:
+UPDATE etf  SET aum=60000000 WHERE name="ishares MSCI EAFE";
+
+output:
+n/a
+
+3. Display the information in both tables using one query.
+
+command:
+SELECT * FROM etf, sponsor WHERE etf.sponsor_id = sponsor.id;
+
+output:
+1|SP500|195262323|true|1|1|iShares
+2|Vanguard Total Stock Market|62414726|false|2|2|Vanguard
+3|iShares MSCI EAFE|58622297|false|1|1|iShares
+4|Vanguard Value ETF|42000000000|true|2|2|Vanguard
+5|Vanguard Emerging Markets|39000000000|true|2|2|Vanguard
+6|iShares US Preferred|16000000000|false|1|1|iShares
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+command:
+SELECT etf.name, sponsor.name from etf JOIN sponsor ON etf.sponsor_id = sponsor.id;
+
+output:
+SP500|iShares
+Vanguard Total Stock Market|Vanguard
+iShares MSCI EAFE|iShares
+Vanguard Value ETF|Vanguard
+Vanguard Emerging Markets|Vanguard
+iShares US Preferred|iShares
