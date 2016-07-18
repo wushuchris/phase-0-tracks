@@ -55,3 +55,20 @@ n/a but here's the resulting remaining items.
 1|SP500|195262323|true|1
 4|Vanguard Value ETF|42000000000|true|2
 5|Vanguard Emerging Markets|39000000000|true|2
+
+Release 3: Add a couple join outputs
+
+
+command: SELECT etf.name, etf.aum FROM etf CROSS JOIN Sponsor; (cross join)
+
+output:
+SP500|195262323
+SP500|195262323
+Vanguard Value ETF|42000000000
+Vanguard Value ETF|42000000000
+Vanguard Emerging Markets|39000000000
+Vanguard Emerging Markets|39000000000
+
+command: SELECT etf.id, etf.name FROM etf LEFT OUTER JOIN etf = sponsor.id; (outer join)
+
+output: I was unable to get an outer join to work.
